@@ -80,3 +80,56 @@ uv sync
 # 5️⃣ Build and publish your package
 uv build
 uv publish
+
+
+
+# Comparison: `uv` vs `pip`
+
+`uv` and `pip` are both tools used in the Python ecosystem, but they serve **different purposes** and have different features. This document compares them clearly.
+
+---
+
+## 1. **Overview**
+
+| Tool | Description |
+|------|-------------|
+| **pip** | The default Python package installer. Installs Python packages from PyPI and manages dependencies. |
+| **uv**  | A modern, all-in-one Python toolchain (by Astral) that manages packages, virtual environments, Python versions, and CLI tools. Written in Rust for speed. |
+
+---
+
+## 2. **Key Differences**
+
+| Feature | pip | uv |
+|---------|-----|----|
+| **Primary Function** | Install, update, and uninstall Python packages | Manage Python packages, virtual environments, dependencies, and run scripts |
+| **Environment Management** | None (relies on `venv` or `virtualenv`) | Built-in environment management (`uv venv`) |
+| **Dependency Locking** | No built-in lockfile (pip can use `requirements.txt`) | Uses `uv.lock` for reproducible environments |
+| **Package Installation Speed** | Standard Python speed | Very fast (Rust backend) |
+| **Python Version Management** | No | Built-in (`uv python install 3.12`) |
+| **CLI Tool Execution** | No | Yes (`uv tool run <cli>`) similar to pipx |
+| **Project Setup** | No | Yes, can initialize projects with `uv init` |
+| **Integration with pyproject.toml** | Partial (via requirements.txt) | Full integration, auto-updates dependencies |
+| **Reproducible Builds** | Manual (`requirements.txt`) | Automatic using `uv.lock` |
+
+---
+
+## 3. **When to Use Each**
+
+| Use Case | Recommended Tool |
+|----------|-----------------|
+| Install a single Python package | `pip install <package>` |
+| Manage multiple Python projects with isolated environments | `uv` |
+| Run a Python CLI tool in an isolated environment | `uv tool run <cli>` |
+| Ensure reproducible builds with dependency lockfile | `uv` |
+| Quick, simple package installation | `pip` |
+
+---
+
+## 4. **Example Commands**
+
+### pip
+```bash
+pip install requests
+pip uninstall requests
+pip freeze > requirements.txt
