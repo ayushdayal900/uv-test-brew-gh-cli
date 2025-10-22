@@ -180,3 +180,22 @@ Homebrew is your **go-to tool** for managing software on macOS and Linux:
 * Open-source and community-maintained
 
 > Whether you’re a developer or casual user, Homebrew makes managing software a **breeze**.
+
+
+
+-> Provide a simple command-line interface to automatically handle the download, installation, and dependency management for thousands of software packages, from command-line tools and programming languages to desktop applications
+
+-> After building a project if we give it to my friend, then he must have to all dependencies before running that project. If he is working on windows then he has to manually add/install all packages, because windows does not have a good package manager.
+
+-> But for linux/macOs there is this HomeBrew tool which is used to install all required/remaining/missing packages for that perticulat project.
+
+-> So, we used homebrew
+
+
+To install pyenv through brew
+-> brew install pyenv
+
+Create a gitub repo and push files in it.
+-> $ gh repo create ayushdayal900/uv-test-brew-gh-cli --public --push --source=.
+
+

@@ -136,3 +136,20 @@ uv publish
 pip install requests
 pip uninstall requests
 pip freeze > requirements.txt
+
+
+
+
+
+
+# my notea
+-> When we want to get an application completely built by an llm then we must uv.
+-> like we don’t have any idea about the code that llm so we will be unable to add dependencies accordingly.
+Here UV plays important role, it will add packages respectively and correctly for that application.
+
+-> ex. Uv add flask
+    - Provide dependencies wrt flask
+    - Provide venv
+    - Initialize git repo
+    - Done all things that you will required for a project workflow
+    - Automation tools
